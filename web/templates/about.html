@@ -21,19 +21,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/uploads/simple/">Upload</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/results/">Results</a>
-                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="/youtubeapp/videos">Projects</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/youtubeapp/videos">Project 1</a>
-                        <a class="dropdown-item" href="#">Project 2</a>
-                        <a class="dropdown-item" href="#">Project 3</a>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -47,17 +37,18 @@
     <img src="{% static 'images/geisel.jpg' %}"/>
 </center>
 <br><br>
+
+<center>
 <section class="container">
     <div class="row">
-        <figure class="col-sm-8">
-            <h2>Python</h2>
-            <a href="http://hackxx.sdhacks.io/">
-                <img src="{% static 'images/hackxx.svg' %}" height="250px"/></a>
-            <p>HackXX is UC San Diego's women-centric hackathon. It’s an empowering place to build great projects. Over
-                24 hours, women will be given the tools and knowledge to materialize their technological dreams.
-                <a href="/uploads/simple/">Try now.</a></p>
+        <figure class="jumbotron">
+            <h2>Acknowledgements</h2>
+            <img src="{% static 'images/bottomphoto.jpg' %}" /></a>
+            <p>Our web application was made possible by OpenCV (Open Source Computer Vision Library). Specifically the image processing open functions in OpenCV for python which uses contours to find the continuous points of pixels with the same colors or intensities. We are happy to share with you our first python and django project collaboration. 
+                <a href="http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_contours_begin/py_contours_begin.html">Learn more about OpenCV.</a></p>
         </figure>
     </div>
+</center>
 </section>
 
 {% endblock %}
