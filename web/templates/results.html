@@ -44,15 +44,28 @@
 </header>
 <br><br>
 <center>
-    <img src="{% static 'images/geisel.jpg' %}"/>
+
+   
 </center>
 <br><br>
 <section class="container">
     <div class="row">
         <figure class="col-sm-8">
-            <h2>Python</h2>
-            <a href="http://hackxx.sdhacks.io/">
-                <img src="{% static 'images/hackxx.svg' %}" height="250px"/></a>
+            <h2>Results</h2>
+            <!--{% if out %}-->
+                     
+                        <!--<a href="{{ out }}">{{ out }}</a></p>-->
+
+                <!--{% endif %}-->
+
+            {% for c in out %}
+
+            <p>colony counted: {{c}}</p>
+
+            {% endfor %}
+
+                <img src="{%  static 'images/newout.png' %}"/>
+           
             <p>HackXX is UC San Diego's women-centric hackathon. It’s an empowering place to build great projects. Over
                 24 hours, women will be given the tools and knowledge to materialize their technological dreams.
                 <a href="/uploads/simple/">Try now.</a></p>

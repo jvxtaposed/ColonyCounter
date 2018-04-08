@@ -23,6 +23,9 @@
                     <a class="nav-link" href="uploads/simple/">Upload</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/results/">Results</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
                 </li>
               
@@ -42,23 +45,23 @@
         </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static 'images/australia.jpg' %}" alt="Australia">
+                <img src="{% static 'images/colonyphoto.jpg' %}" alt="Australia">
                 <div class="carousel-caption">
-                    <h3>Welcome!</h3>
-                    <p>The webapp that counts your colonies for you</p>
+                    <h3 style="color: inherit; font-size: 2.5rem">The webapp that counts your colonies for you</h3>
+                    <p style ="color: inherit; font-size: 2.5rem"></p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'images/grand_teton.jpg' %}" alt="Grand Teton">
+                <img src="{% static 'images/colonyphoto2.jpg' %}" alt="Grand Teton">
                 <div class="carousel-caption">
-                    <h3>upload an image of your cell culture</h3>
+                    <h3 class = "head" style="color: inherit; font-size: 2.5rem">upload an image of your cell culture</h3>
                     <p></p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'images/italy.jpg' %}" alt="Italy">
+                <img src="{% static 'images/culture-de-bacteries.jpg' %}" alt="Italy">
                 <div class="carousel-caption">
-                    <h3>See the circled output and colony count!</h3>
+                    <h3 style="color: inherit; font-size: 2.5rem">See the circled output and colony count!</h3>
                     <p></p>
                 </div>
             </div>
@@ -76,22 +79,23 @@
 
 <center>
 <section class ="container">
-<div class ="row">   
+<div class ="upload_file">   
 <div id="upload_file" >
+    <div style="float:center;" >
     <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="myfile">
-    <button type="submit">Upload</button>
+    <input type="file" name="myfile" class = "btn btn-primary">
+    <button type="submit" class = "btn btn-primary">Upload</button>
+  
+
+</div>
   </form>
 
   {% if uploaded_file_url %}
     <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
 
   {% endif %}
-  <?php
-   if()
 
-  ?>
 
     </div>
  </div> 
@@ -105,12 +109,10 @@
 <section class="container">
     <div class="row">
         <figure class="jumbotron">
-            <h2>Python</h2>
-            <!--> get another image </-->
-            <img src="{% static 'images/hackxx.svg' %}" height="250px"/></a>
-            <p>HackXX is UC San Diego's women-centric hackathon. It’s an empowering place to build great projects. Over
-                24 hours, women will be given the tools and knowledge to materialize their technological dreams.
-                <a href="http://127.0.0.1:8000/simple/upload/">try now.</a></p>
+            <h2>Acknowledgements</h2>
+            <img src="{% static 'images/bottomphoto.jpg' %}" /></a>
+            <p>Our web application was made possible by OpenCV (Open Source Computer Vision Library). Specifically the image processing open functions in OpenCV for python which uses contours to find the continuous points of pixels with the same colors or intensities. We are happy to share with you our first python and django project collaboration. 
+                <a href="http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_contours_begin/py_contours_begin.html">Learn more about OpenCV.</a></p>
         </figure>
     </div>
 </center>

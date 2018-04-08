@@ -9,6 +9,7 @@ from django.core.files.storage import FileSystemStorage
 from web.models import Document
 from web.forms import DocumentForm
 from colcounter import colCount
+import os
 
 
 def home(request):
@@ -48,11 +49,12 @@ def home(request):
 		fs = FileSystemStorage()
 		filename = fs.save(myfile.name, myfile)
 		uploaded_file_url = fs.url(filename)
-		colCount.cnt(filename)
-		
-		return render(request, 'home.html', {
-			'uploaded_file_url': uploaded_file_url
-		})
+		out = colCount.cnt(filename)
+		#image = results(None)
+		return render(request, 'results.html', {
+			'out':[ out]
+			})
+
 	return render(request, 'home.html')
 
 def about(request):
@@ -68,3 +70,18 @@ def projects(request):
 
 	}
 	return HttpResponse(template.render(context,request))
+
+def contact(request):
+	template = loader.get_template('contact.html')
+	context={
+
+	}
+	return HttpResponse(template.render(context,request))
+
+def results(request):
+	template = loader.get_template('results.html')
+	context={
+
+	}
+	return HttpResponse(template.render(context,request))
+

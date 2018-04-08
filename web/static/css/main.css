@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
+  font-color: #000000;
 }
 
 header {
@@ -14,10 +15,19 @@ footer .row {
 }
 
 header h1 {
-  font-weight: 700;
+  font-weight: 3200;
   margin: 0;
 }
 
+header h3 {
+  font-weight: 1000;
+  margin: 0;
+  font-color: black;
+}
+
+.head {
+  font-color: #000000;
+}
 header nav {
   display: flex;
   justify-content: flex-end;
@@ -25,8 +35,11 @@ header nav {
 
 header p {
   padding: 0 20px;
-  margin: 0;
+  text-align: center;
+  margin: auto;
 }
+
+
 
 section .row {
   padding: 0 20px;
@@ -60,11 +73,27 @@ footer li img {
   width: 32px;
   height: 32px;
 }
-
+.upload_file {
+  text-align: center;
+}
+.jen img{
+max-width: 50%;
+max-height: 50%;
+}
+.btn btn-primary {
+  position: absolute;
+}
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
+.carousel-caption {
+  posituion: absolute;
+  top: 50%;
+}
+.row img{
+  max-width: 50%;
+  max-height: 50%;
+}
 /* Make the image fully responsive */
 .carousel-inner img {
     width: 100%;
