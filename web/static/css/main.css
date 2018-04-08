@@ -28,6 +28,11 @@ header p {
   margin: 0;
 }
 
+section .row {
+  padding: 0 20px;
+  margin: 0;
+}
+
 section .row img {
   margin: 0 0 30px;
   width: 100%;
