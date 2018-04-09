@@ -22,18 +22,7 @@
                     <a class="nav-link" href="/uploads/simple/">Upload</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/results/">Results</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="/youtubeapp/videos">Projects</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/youtubeapp/videos">Project 1</a>
-                        <a class="dropdown-item" href="#">Project 2</a>
-                        <a class="dropdown-item" href="#">Project 3</a>
-                    </div>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -52,23 +41,18 @@
     <div class="row">
         <figure class="col-sm-8">
             <h2>Results</h2>
-            <!--{% if out %}-->
-                     
-                        <!--<a href="{{ out }}">{{ out }}</a></p>-->
-
-                <!--{% endif %}-->
 
             {% for c in out %}
 
-            <p>colony counted: {{c}}</p>
+            <p>colonies counted: {{c}}</p>
 
             {% endfor %}
-
+                <div class ="result">
                 <img src="{%  static 'images/newout.png' %}"/>
+                </div>
            
-            <p>HackXX is UC San Diego's women-centric hackathon. It’s an empowering place to build great projects. Over
-                24 hours, women will be given the tools and knowledge to materialize their technological dreams.
-                <a href="/uploads/simple/">Try now.</a></p>
+            <p>The number of colonies estimated can be shown by the colonies circled in black.
+                </p>
         </figure>
     </div>
 </section>

@@ -36,7 +36,7 @@ header nav {
 header p {
   padding: 0 20px;
   text-align: center;
-  margin: auto;
+  margin: 0;
 }
 
 
@@ -78,9 +78,47 @@ footer li img {
   margin: center;
 }
 .jen img{
-max-width: 50%;
-max-height: 50%;
+max-width: 20%;
+max-height: 20%;
+display: flex;
+align-items: left;
+margin: 0 0 30px;
 }
+
+.alex img{
+max-width: 20%;
+max-height: 20%;
+display: fixed;
+align-items: right;
+margin: 0 0 30px;
+}
+section .row .result img{
+max-width: 80%;
+max-height: 80%;
+}
+
+.alex {
+  justify-content: flex-end;
+}
+.jen {
+  justify-content: flex-end;
+
+}
+.col-md-12 {
+  margin: 0 0 30px;
+}
+
+.sideby img{
+max-width: 30%;
+max-height: 30%;
+
+}
+.sidebyW {
+margin: 0 0 30px;
+align-items: left:;
+
+}
+
 .btn btn-primary {
   position: absolute;
 }

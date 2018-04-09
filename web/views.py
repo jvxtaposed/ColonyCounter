@@ -24,8 +24,10 @@ def simple_upload(request):
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
 
-        return render(request, 'simple_upload.html', {
-            'uploaded_file_url': uploaded_file_url
+        out = colCount.cnt(filename)
+		#image = results(None)
+        return render(request, 'results.html', {
+        	'out':[ out]
         })
     return render(request, 'simple_upload.html')
 
