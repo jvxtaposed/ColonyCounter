@@ -97,10 +97,12 @@ max-width: 80%;
 max-height: 80%;
 }
 
-.alex {
+section .alex {
+  margin: 0 0 30px;
   justify-content: flex-end;
 }
-.jen {
+section .jen {
+  margin: 0 0 30px;
   justify-content: flex-end;
 
 }
