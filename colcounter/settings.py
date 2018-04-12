@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = "~/colcounter/colcounter/web"
+STATIC_ROOT = "~/colcounter/colcounter"
