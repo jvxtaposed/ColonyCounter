@@ -1,5 +1,5 @@
 import numpy as np
-import cv2
+from .cv2 import *
 def cnt(x):
 	image1 = cv2.imread(x)
 	imgray = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
