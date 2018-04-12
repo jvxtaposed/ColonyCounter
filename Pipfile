@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 django = "*"
 numpy = "*"
-cv2 = "*"
 
 [dev-packages]
 
