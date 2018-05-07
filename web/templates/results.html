@@ -1,8 +1,11 @@
-{% extends 'header.html' %}
+<!-- HackXX_Tutorial About Page -->
 
-{% load static %}
+{%  extends 'header.html' %}
 
 {% block content %}
+
+{% load staticfiles %}
+
 <header class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="/">Colony Counter</a>
@@ -15,12 +18,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item active">
-                	 <a class="nav-link" href="/uploads/simple/">Upload<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/uploads/simple/">Upload</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about/">About</a>
-                </li>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -29,25 +31,30 @@
         </div>
     </nav>
 </header>
+<br><br>
 <center>
-<section class ="container">
-<div class ="upload_file">   
-<div id="upload_file" >
-	<br></br><br></br>
-	<br></br><br></br>
-    <div style="float:center;">
-    <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="myfile" class = "btn btn-primary">
-    <button type="submit" class = "btn btn-primary">Upload</button>
-  
 
-</div>
-  </form>
+   
+</center>
+<br><br>
+<section class="container">
+    <div class="row">
+        <figure class="col-sm-8">
+            <h2>Results</h2>
 
-  {% if uploaded_file_url %}
-    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
-  {% endif %}
+            {% for c in out %}
 
-  <p><a href="{% url 'home' %}">Return to home</a></p>
+            <p>colonies counted: {{c}}</p>
+
+            {% endfor %}
+                <div class ="result">
+                <img src="{%  static 'images/newout.png' %}"/>
+                </div>
+           
+            <p>The number of colonies estimated can be shown by the colonies circled in black.
+                </p>
+        </figure>
+    </div>
+</section>
+
 {% endblock %}
